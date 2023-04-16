@@ -17,7 +17,6 @@ def main():
 
     load_dotenv("api.env")
     api_key = os.environ.get('OPENAI_API_KEY')
-    print(api_key)
     # load bs and variants using the DataManager class
     dm = DataManager("data/uqv100-backstories.tsv", "data/uqv100-systemInputRun-uniqueOnly-spelledNormQueries.tsv",
                      data_src="UQV")
@@ -60,7 +59,7 @@ def main():
         print("Error connecting to openai.. " + str(e))
     finally:
         generated_data = pd.DataFrame({"UQV100Id": uqv_ids, "backstory": bs_ls,"query": generated_variants})
-        generated_data.to_csv(dm.data_src + "_GPT_variants_temp_" + temp)
+        generated_data.to_csv(dm.data_src + "_GPT_variants_temp_" + str(temp))
 
 if __name__ == "__main__":
     main()
