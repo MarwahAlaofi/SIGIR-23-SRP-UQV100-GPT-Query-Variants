@@ -1,5 +1,5 @@
 # SIGIR'23 Short Paper Data for Reproduction 
-This repository has the _query variants_ and the _runs_ used to generate the results presented in the SIGIR'23 short paper: 
+This repository has the _query variants_ used to generate the results presented in the SIGIR'23 short paper: 
 _Can Generative LLMs Create Query Variants for Test Collections? An Exploratory Study._
 
 ## 🔖 Paper Overview 
@@ -16,9 +16,6 @@ You can run the script `variant_generation/generate_variants.py` to generate que
 For each backstory, the script builds a prompt using the _task description_ (DESC_A) given in variant_generation/prompts.py, appends a _random example_, and provide the _input backstory_ (see Figure 1 in the paper).
 Note that you need to provide an access key to be able to use the OpenAI API.
 Alternatively, you can access the generated query variants used in this paper with varying temperatures at: `gpt_generated_variants/`
-
-### Runs
-Runs generated in response to the query variants given the _human set_ and the three _GPT sets_ are available at: `runs/` 
 
 ## Citation
 If you find this paper useful, please cite it using the following BibTeX:
