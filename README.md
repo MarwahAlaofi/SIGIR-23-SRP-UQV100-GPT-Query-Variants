@@ -20,9 +20,10 @@ Alternatively, you can access the generated query variants used in this paper wi
 ### Runs
 Runs generated in response to the query variants given the _human set_ and the three _GPT sets_ are available at: `runs/` 
 
-### Citation
+## Citation
 If you find this paper useful, please cite it using the following BibTeX:
-`@INPROCEEDINGS{Alaofi23GptVariants,
+```
+@INPROCEEDINGS{Alaofi23GptVariants,
     TITLE = {Can Generative LLMs Create Query Variants for Test Collections? An Exploratory Study},
     AUTHOR = {Alaofi, Marwah and Gallagher, Luke and Sanderson, Mark and Scholer, Falk and Thomas, Paul},
     BOOKTITLE = {{SIGIR} '23: The 46th International {ACM} {SIGIR}
@@ -32,7 +33,8 @@ If you find this paper useful, please cite it using the following BibTeX:
     URL = {https://doi.org/},
     DOI = {},
     NOTE = {to appear}
-}`
+}
+```
 
 [//]: # ()
 [//]: # (## 🤖 Reproduction )
