@@ -28,19 +28,13 @@ If you find this paper useful, please cite it using the following BibTeX:
                   Information Retrieval},
     YEAR = {2023},
     URL = {https://doi.org/},
-    DOI = {},
+    DOI = {10.1145/3539618.3591960},
     NOTE = {to appear}
 }
 ```
 
-[//]: # ()
 [//]: # (## 🤖 Reproduction )
 
 [//]: # (To get the set stats &#40;table 1&#41;)
 [//]: # (To reproduce results presented in Fig. 3)
 [//]: # (To reproduce evaluation metrics &#40;Table 2&#41;)
-
-[//]: # ()
-[//]: # (## Cite the paper)
-
-[//]: # (Marwah Alaofi,Luke Gallagher, Mark Sanderson, Falk Scholer, Paul Thomas. 2023. )
