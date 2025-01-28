@@ -1,6 +1,6 @@
 import pandas as pd
 import sys
-from GPT3Completion import *
+import openai
 from DataManager import *
 import os
 from dotenv import load_dotenv
@@ -40,17 +40,28 @@ def main():
     generated_variants = []
     uqv_ids = []
     bs_ls = []
+
+    # Set up the OpenAI Client
+    client = openai.OpenAI(api_key=api_key)
+    MODEL = "gpt-3.5-turbo"
+    MAX_TOK = 3000
+
     try:
         for i in tqdm(range(0,len(prompt_ls))):
             # print(example)
-            gpt3_completion = GPT3Completion(api_key)
-            response = gpt3_completion.generate_completions(
-                model="text-davinci-003",
-                prompt=prompt_ls[i],
+
+            response = client.chat.completions.create(
+                model=MODEL,
+                messages=[ {
+                        "role" : "user",
+                        "content": prompt_ls[i],
+                           }
+                          # could also have a system prompt if desired
+                         ],
                 temperature=temp,
-                max_tokens=3000,
+                max_tokens=MAX_TOK
             )
-            response = response.strip()
+            response = response.choices[0].message.content.strip()
             for ln in response.split("\n"):
                 generated_variants.append(ln)
                 uqv_ids.append("UQV100." + str(i + 1).zfill(3))
